@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+        <style>
+
+
+#typedText {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /* .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 24px;
+            background-color: black;
+            animation: blink 0.6s steps(1) infinite;
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        } */
+           
+            .active{
+                color: blue;
+            }
+            ul li:hover{
+                color: blue;
+                transition: all ease-in-out 500ms;            
+            }
+            .trans1{
+                opacity: 1; 
+                transition-duration: 5s;              
+                transition: all ease-in-out   ;                    
+            }
+            @media (max-width : 376px){     
+                .test1{
+                    display: none;
+                }
+                #sec1{
+
+                    background-color: black;
+                    display: flex;
+                    justify-content: center;
+                }
+                .test2{
+                   
+                   height: 800px;
+                }
+                .test3{
+                    align-items: center;
+                    gap: 50px;
+                  
+                }
+                #test4{
+                   
+                   width: 300px;
+                    font-size: 35px;
+                    margin-left:-20px ;
+                }
+                #test5{
+                    
+                    font-size: large;
+                    width: 300px;
+                    margin-left:-20px ;
+                }  
+                .test6{
+                    margin-left: -20px;
+                } 
+                #test7{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 300px;
+                    height: 800px;
+                }   
+                #test8{
+                    right: 85px;
+                    bottom: 50px;
+                }
+                #sec2{
+                    display: flex;
+                    flex-direction: column;
+                }
+                #sec3{
+                    height: 1200px;
+                    gap: 100px;
+                    
+                }
+                #test10{
+                    width: 300px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    gap: 0px;
+                    position: relative;
+                }
+                 #div1,#div2,#div3 {
+                    position: absolute;
+                    width: 100%;                
+                    display: flex;
+                    flex-direction: column;                  
+                    height: 300px;
+                } 
+                                 
+                #test11{
+                    width: 300px;
+                    align-self: flex-start;
+                }
+                .test12{
+                   width: 300px;
+                   gap: 20px;
+                   
+                }
+                #test13{
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+                #test14{
+                   width: 300px;
+                   text-align: center;
+                   font-size: 40px;
+                   padding-bottom: 10px;
+                }
+                #test15{
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    padding-bottom: 50px;
+                    gap: 20px;
+                    
+                }
+                #test16{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 50px;
+
+                }
+                #test17{
+                    width: 100px;
+                }
+                #test18{
+                    padding-bottom: 0px;
+                    height: inherit;
+                }
+                #test19{
+                    display: flex;
+                    flex-direction: column;
+                    
+                }        
+                #test20{
+                    width: 290px;
+                }    
+                #test21{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 10px;
+                }
+                #test22{
+                    gap: 100px;
+                }
+                #btn{
+                    display: none;
+                }
+                #navsmall{
+                    display: block;
+                }
+                #btn1{
+                   
+                    right: 5px;
+                }
+
+            }         
+        </style>
+    </head>
+    <body class="flex flex-col items-center gap-[50px] overflow-x-hidden">
+      
+        <section id="sec1" class="z-20  fixed w-full scale-10 ">
+            <div class="bg-blend-darken flex flex-row-reverse justify-between p-6">
+                <ul class=" test1 flex gap-[30px] text-white pr-8 font-semibold text-lg  ">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#sec2">Service</a></li>
+                    <li><a href="#sec3">New cars</a></li>
+                    <li><a href="#sec4">Featured cars</a></li>
+                    <li><a href="#sec5">Brands</a></li>
+                    <li><a href="#sec6">Contact</a></li>
+                </ul>
+                <button id="btn" class=" text-white text-2xl tracking-wider font-mono pl-6"><a href="#">CARVILLA</a></button>
+             
+                <!-- ............................navbar smal with list................................. -->
+
+                <div id="navsmall" class="hidden flex flex-col  gap-1 w-[375px]">            
+                    <div class="self-start  flex gap-[80px]  pl-5">
+                        <i id="btn2" class="fa-solid fa-list text-blue-700 border border-blue-700 p-3 rounded text-lg "></i>
+                        <button class=" text-white text-2xl tracking-wider font-mono "><a href="#">CARVILLA</a></button>
+                    </div>        
+                      <ul id="lis" class="hidden p-[20px] pl-9 flex flex-col gap-[30px] text-white font-semibold text-lg ">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#sec2">Service</a></li>
+                        <li><a href="#sec3">New cars</a></li>
+                        <li><a href="#sec4">Featured cars</a></li>
+                        <li><a href="#sec5">Brands</a></li>
+                        <li><a href="#sec6">Contact</a></li>
+                      </ul>              
+              </div>             
+            </div>        
+        </section>  
+        <section>
+            
+            <div class=" relative text-center z-0">
+                <img class="test2"  src="images/welcome-hero/welcome-banner.jpg" >
+                <div class=" absolute inset-0 bg-gradient-to-l from-slate-700 via-slate-800 to-slate-950 opacity-50"></div>
+                <div class=" test3  absolute inset-[200px] flex flex-col justify-center gap-5 text-white">
+                    <h2 id="test4" class=" text-[45px] font-bold font-serif"></h2>
+                    <p id="test5" class=" font-semibold text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="test6 self-center w-[200px] p-[15px] bg-blue-700 rounded text-lg">Contact us</button>
+                </div>
+            </div>
+        </section>   
+             
+        <div id="test7" class=" relative z-10 w-[900px] h-[300px] text-gray-500 bg-white shadow-md rounded mt-[-90px] flex flex-wrap gap-[30px]  p-8  ">
+           <div class="flex flex-col gap-3 w-[200px] ">
+            <label class="text-black font-semibold" >Select Year</label>
+            <select class="bg-gray-200 rounded h-[45px] p-2 " >
+                <option value="">Year</option>
+                <option value="">2018</option>
+                <option value="">2019</option>
+                <option value="">2020</option>
+            </select>
+           </div>
+           <div  class="flex flex-col gap-3 w-[200px]">
+            <label class="text-black font-semibold" >select make</label>
+            <select class="bg-gray-200 rounded h-[45px] p-2">
+                <option value="">Make</option>
+                <option value="">Toyota</option>
+                <option value="">Optra</option>
+                <option value="">Honday</option>
+            </select>
+           </div>
+           <div class="flex flex-col gap-3 w-[200px]">
+            <label class="text-black font-semibold">select model</label>
+            <select class="bg-gray-200 rounded h-[45px] p-2" >
+                <option value="">Model</option>
+                <option value="">Kia-Rio</option>
+                <option value="">Mitsubishi</option>
+                <option value="">Ford</option>
+            </select>
+           </div>
+          
+           <div class="flex flex-col gap-3 w-[200px]">
+            <label class="text-black font-semibold">body style</label>
+            <select class="bg-gray-200 rounded h-[45px] p-2">
+                <option value="">style</option>
+                <option value="">Reader</option>
+                <option value="">Van</option>
+                <option value="">Redaster</option>
+            </select>
+           </div>
+           <div class="flex flex-col gap-3 w-[200px]">
+            <label class="text-black font-semibold">car condition</label>
+            <select class="bg-gray-200 rounded h-[45px] p-2">
+                <option value="">condition</option>
+                <option value="">Somthig</option>
+                <option value="">Somthig</option>
+                <option value="">Somthig</option>
+            </select>
+           </div>
+           <div class="flex flex-col gap-3 w-[200px]">
+            <label class="text-black font-semibold">select price</label>
+            <select class="bg-gray-200 rounded h-[45px] p-2">
+                <option value="">price</option>
+                <option value="">$0.00</option>
+                <option value="">$0.00</option>
+                <option value="">$0.00</option>
+            </select>
+           </div>
+           <div id="test8" class="absolute right-10 bottom-[145px] ">
+            <button class="bg-blue-700  w-[150px] h-[45px] rounded border-none text-white text-l ">Search</button>
+           </div>  
+        </div>
+
+        <section id="sec2" class="flex gap-[60px] mt-[50px]">
+            <div class="text-center flex flex-col justify-center gap-3 border h-[300px] p-4 rounded  transition-colors duration-500 ease-in-out hover:bg-blue-700   ">
+                <i class="fa-solid fa-car text-3xl text-gray-500 hover:text-white  transition-colors duration-500 ease-in-out "></i>
+                <a href="#" class=" text-gray-500 text-xl font-semibold hover:text-white  transition-colors duration-500 ease-in-out">largest dealership of car</a>
+                <p class="text-gray-400 hover:text-white  transition-colors duration-500 ease-in-out">Nemo enim ipsam voluptatem quia <br> voluptas sit aspernatur aut odit aut <br> den fugit sed quia.</p>
+                <div class="h-1 w-[30px] rounded-full bg-blue-700 mt-5 self-center"></div>
+            </div>
+            <div class="text-center flex flex-col justify-center gap-3 border h-[300px] p-4 rounded transition-colors duration-500 ease-in-out  bg-white hover:bg-blue-700">
+                <i class="fa-solid fa-car-side text-3xl text-gray-500 hover:text-white  transition-colors duration-500 ease-in-out "></i>
+                <a href="#" class="text-gray-500 text-xl font-semibold hover:text-white  transition-colors duration-500 ease-in-out">unlimited repair warrenty</a>
+                <p class="text-gray-400 hover:text-white  transition-colors duration-500 ease-in-out ">Nemo enim ipsam voluptatem quia <br> voluptas sit aspernatur aut odit aut <br> den fugit sed quia.</p>
+                <div class="h-1 w-[30px] rounded-full bg-blue-700 mt-5 self-center"></div>
+            </div>
+            <div class="text-center flex flex-col justify-center gap-3 border h-[300px] p-4 rounded transition-colors duration-500 ease-in-out  bg-white hover:bg-blue-700">
+                <i class="fa-solid fa-phone text-3xl text-gray-500 hover:text-white  transition-colors duration-500 ease-in-out"></i>
+                <a href="#" class="text-gray-500 text-xl font-semibold hover:text-white  transition-colors duration-500 ease-in-out">insurence support</a>
+                <p  class="text-gray-400 hover:text-white  transition-colors duration-500 ease-in-out">Nemo enim ipsam voluptatem quia <br> voluptas sit aspernatur aut odit aut <br> den fugit sed quia.</p>
+                <div class="h-1 w-[30px] rounded-full bg-blue-700 mt-5 self-center"></div>
+            </div>
+        </section>
+
+        <section id="sec3" class="bg-gray-100  w-full flex flex-col items-center  pt-10">
+            <div>
+              <div class="text-center pt-11 flex flex-col items-center ">
+                  <p class="text-l font-semibold text-gray-400 ">Checkout The Latest Cars</p> 
+                  <p class="text-4xl font-semibold text-gray-600 ">Newest Cars</p> 
+                  <div class="h-1 w-[50px] rounded-full bg-blue-700 mt-5 "></div>
+               </div>
+            </div>
+            
+            <div id="test10" class=" w-[1200px]  h-[500px] pl-[50px] " >                                              
+                <div id="div1" class="flex gap-[100px] justify-between p-[10px] h-[400px]">
+                        <div class="self-center"><img id="test11" src="images/new-cars-model/ncm1.png" class="w-[1500px]  " alt="logo"></div>
+                        <div class="test12 text-wrap flex flex-col justify-evenly  w-[1000px]   ">
+                            <a  href="#">
+                                <h2 class="text-3xl font-semibold text-gray-600">chevrolet camaro<span class="text-4xl"> za100</span></h2>  
+                             </a>
+                            <p class="text-xl  text-gray-600">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                            </p>
+                            <p class="text-xl  text-gray-600">                              
+                                Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 											
+                            </p>
+                            <button class=" w-[200px] bg-blue-600 rounded p-[20px] text-xl" onclick="window.location.href=`#`">View details</button>
+                        </div>              
+                    </div>
+                              
+                    <div id="div2" class=" flex gap-[100px] justify-between p-[10px] h-[400px]  ">
+                        <div class="self-center"><img id="test11"   src="images/new-cars-model/ncm2.png" class="w-[1500px]  " alt="logo"></div>
+                        <div class=" test12 text-wrap flex flex-col justify-evenly  w-[1000px]   ">
+                            <a  href="#">
+                                <h2 class="text-3xl font-semibold text-gray-600">BMW series-3 wagon</h2>  
+                             </a>
+                            <p class="text-xl  text-gray-600">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                            </p>
+                            <p class="text-xl  text-gray-600">                              
+                                Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 											
+                            </p>
+                            <button class=" w-[200px] bg-blue-600 rounded p-[20px] text-xl" onclick="window.location.href=`#`">View details</button>
+                        </div>              
+                    </div>
+                              
+                    <div id="div3" class=" flex gap-[100px] justify-between p-[10px] h-[400px]  ">
+                        <div class="self-center"><img id="test11"  src="images/new-cars-model/ncm3.png" class="w-[1500px]  " alt="logo"></div>
+                        <div class="test12 text-wrap flex flex-col justify-evenly  w-[1000px]   ">
+                            <a  href="#">
+                                <h2 class="text-3xl font-semibold text-gray-600">ferrari 488 superfast</h2>  
+                             </a>
+                            <p class="text-xl  text-gray-600">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                            </p>
+                            <p class="text-xl  text-gray-600">                              
+                                Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 											
+                            </p>
+                            <button class=" w-[200px] bg-blue-600 rounded p-[20px] text-xl" onclick="window.location.href=`#`">View details</button>
+                        </div>              
+                    </div> 
+                </div>               
+          </section> 
+
+          <section id="sec4">
+            <div class=" flex flex-col gap-10 ">
+            <div class="text-center flex flex-col gap-1 pt-[100px] pb-[50px]  ">
+                <p class="text-l font-semibold text-gray-400 ">Checkout the featured cars</p> 
+                  <p class="text-4xl font-semibold text-gray-600 ">Featured cars</p> 
+                  <div class="h-[2px] w-[60px] rounded-full bg-blue-700 mt-5 self-center "></div>
+            </div>
+            
+            <div id="test13" class=" flex gap-[25px] items-center ">           
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11   " src="images/featured-cars/fc1.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11  " src="images/featured-cars/fc2.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11  " src="images/featured-cars/fc3.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11  " src="images/featured-cars/fc4.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>               
+            </div>
+
+            <div id="test13" class="flex gap-[35px]">            
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">Infiniti z5</a>
+                    <p class="text-gray-600 font-semibold">$89,395</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">Porsche 718 cayman</a>
+                    <p class="text-gray-600 font-semibold">$9,000000</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">Bmw 8-Series Coupe</a>
+                    <p class="text-gray-600 font-semibold">$88,395</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">BMW xseries-6</a>
+                    <p class="text-gray-600 font-semibold">$76,395</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>               
+            </div>          
+            
+            <div id="test13" class=" flex gap-[25px] items-center ">           
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11   " src="images/featured-cars/fc5.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11  " src="images/featured-cars/fc6.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11  " src="images/featured-cars/fc7.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>
+                <div class=" border w-[292px] h-[350px]  flex flex-col justify-center items-center p-4 gap-5 ">
+                    <img class="w-[200px] pb-11  " src="images/featured-cars/fc8.png" alt="">
+                    <div class="border w-[292px]"></div>
+                    <div class=" text-xs text-gray-400 w-[200px] self-start flex gap-4 flex-wrap">
+                        <p>Model: 2017</p>
+                        <p>3100 Mi</p>
+                        <p>240HP</p>                   
+                        <p>Automatic</p>
+                    </div>
+                </div>               
+            </div>
+
+            <div id="test13" class="flex gap-[35px]">            
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">BMW 6-Series Gran Coupe</a>
+                    <p class="text-gray-600 font-semibold">$89,395</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">Chevrolet Camaro Wmv20</a>
+                    <p class="text-gray-600 font-semibold">$9,000000</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">Lamborghini V520</a>
+                    <p class="text-gray-600 font-semibold">$88,395</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                <div>
+                    <a class="text-gray-800 text-xl font-semibold" href="#">Audi A3 Sedan</a>
+                    <p class="text-gray-600 font-semibold">$76,395</p>
+                    <p class="text-gray-400">Neque porro quisquam est, qui dolorem<br>ipsum quia dolor sit amet, consectetur,<br> adipisci velit, sed quia non</p>
+                </div>
+                
+            </div>          
+        </div>
+          </section>
+
+          
+          <section  class="flex flex-col gap-10 bg-slate-50 w-full items-center pt-[80px]">
+            <div class="flex flex-col gap-1">
+                <h1 id="test14" class="text-5xl font-semibold">what our clients say</h1>
+                <div class="h-1 w-[80px] rounded-full bg-blue-700 mt-5 self-center"></div>
+            </div>
+            <div id="test15" class="w-full flex justify-around pb-[150px]">
+                <div class="border flex flex-col items-center gap-5 p-[60px] transition-all duration-500 ease-in-out hover:bg-blue-600 ">
+                    <img class="rounded-full w-[70px] pb-4" src="images/clients/c1.png" alt="">
+                    <p class="text-gray-500 text-lg font-semibold transition-colors duration-500 ease-in-out  hover:text-white ">
+                        Sed ut pers unde omnis iste natus <br> error sit voluptatem accusantium <br> dolor laudan rem aperiam, eaque<br>ipsa quae ab illo inventore verit. 
+                    </p>
+                    <div class="flex flex-col items-center text-gray-700 font-semibold transition-colors duration-500 ease-in-out  hover:text-white">
+                        <a href="">John doe</a>
+                        <a class="text-xl" href="">Washington</a>
+                    </div>
+                </div>
+                <div class="border flex flex-col items-center gap-5 p-[60px] transition-all duration-500 ease-in-out hover:bg-blue-600 ">
+                    <img class="rounded-full w-[70px] pb-4" src="images/clients/c2.png" alt="">
+                    <p class="text-gray-500 text-lg font-semibold transition-colors duration-500 ease-in-out  hover:text-white">
+                        Sed ut pers unde omnis iste natus <br> error sit voluptatem accusantium <br> dolor laudan rem aperiam, eaque<br>ipsa quae ab illo inventore verit. 
+                    </p>
+                    <div class="flex flex-col items-center text-gray-700 font-semibold transition-colors duration-500 ease-in-out  hover:text-white">
+                        <a href="">Tomas lili</a>
+                        <a class="text-xl" href="">New york</a>
+                    </div>
+                </div>
+                <div class="border flex flex-col items-center gap-5 p-[60px] transition-all duration-500 ease-in-out hover:bg-blue-600 ">
+                    <img class="rounded-full w-[70px] pb-4" src="images/clients/c3.png" alt="">
+                    <p class="text-gray-500 text-lg font-semibold transition-colors duration-500 ease-in-out  hover:text-white">
+                        Sed ut pers unde omnis iste natus <br> error sit voluptatem accusantium <br> dolor laudan rem aperiam, eaque<br>ipsa quae ab illo inventore verit. 
+                    </p>
+                    <div class="flex flex-col items-center text-gray-700 font-semibold transition-colors duration-500 ease-in-out  hover:text-white">
+                        <a href="">Romi rain</a>
+                        <a class="text-2xl" href="">London</a>
+                    </div>
+                </div>
+                
+            </div>
+          </section>
+          <section id="sec5" class=" w-full" >
+            <div id="test16" class="flex justify-around pt-[100px]">
+                <img id="test17" src="images/brand/br1.png" alt="brand">
+                <img id="test17" src="images/brand/br2.png" alt="brand">
+                <img id="test17" src="images/brand/br3.png" alt="brand">
+                <img id="test17" src="images/brand/br4.png" alt="brand">
+                <img id="test17" src="images/brand/br5.png" alt="brand">
+                <img id="test17" src="images/brand/br6.png" alt="brand">           
+            </div>
+          </section>
+
+          <section id="sec6" class="bg-blue-950 w-full mt-[130px] ">
+            <div id="test22"  class="p-11 flex flex-col items-center gap-[180px] ">
+                <div id="test19" class="flex gap-[100px] pt-[100px]">
+                    <div class="flex flex-col gap-6 ">
+                        <div>
+                            <a class="text-white text-2xl font-semibold font-serif" href="#"> CARVILLA</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-300">Ased do eiusm tempor incidi ut <br> labore et dolore magnaian aliqua. Ut <br> enim ad minim veniam.</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-300">info@themesine.com <br> +1 (885) 2563154554</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 ">
+                        <div class="font-semibold text-white ">About Devloon</div>
+                        <div  class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6"><a href="#">About Us</a></div>
+                        <div  class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6"><a href="#">career</a></div>
+                        <div  class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6"><a href="#">terms of service</a></div>
+                        <div  class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6"><a href="#">privacy policy</a></div>
+                    </div>
+                    <div class="flex gap-[100px]">
+                        <div class="flex flex-col gap-4">
+                            <div class="font-semibold text-white">top brands</div>
+                            <div class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6">BMW</div>
+                            <div class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6">lamborghini</div>
+                            <div class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6">camaro</div>
+                            <div class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6">audi</div>
+                            <div class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6">infiniti</div>
+                            <div class="text-gray-300 transition ease-in-out duration-500  hover:translate-x-6">nissan</div>
+                        </div>
+                            <div class="flex flex-col gap-4 text-gray-300 pt-9 ">
+                                <div class=" transition ease-in-out duration-500  hover:translate-x-6" ><a  href="#">ferrari</a></div>
+                                <div class=" transition ease-in-out duration-500  hover:translate-x-6"><a href="#">porsche</a></div>
+                                <div class=" transition ease-in-out duration-500  hover:translate-x-6"><a href="#">land rover</a></div>
+                                <div class=" transition ease-in-out duration-500  hover:translate-x-6"><a href="#">aston martin</a></div>
+                                <div class=" transition ease-in-out duration-500  hover:translate-x-6"><a href="#">mersedes</a></div>
+                                <div class=" transition ease-in-out duration-500  hover:translate-x-6"><a href="#">opel</a></div>
+                            </div>
+                        </div>
+                   
+                    <div class="flex flex-col gap-4">
+                       <div class="text-white font-semibold pb-4">News Letter</div> 
+                       <div class="text-gray-300">Subscribe to get latest news update <br> and informations</div> 
+                       <div>
+                           <input class="bg-blue-950 w-[300px] h-[30px] shadow-sm  shadow-black rounded-sm" type="search">
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <div id="test20" class="w-[1200px] h-[0.5px] bg-gray-400 "></div>
+                    <div id="test21" class=" flex justify-between items-center ">
+                        <div class="font-semibold text-gray-500 hover:text-white">© copyright.designed and developed by themesine.</div>
+                        <div class="text-gray-500 flex gap-5 ">
+                            <i class="fa-brands fa-facebook-f hover:text-white"></i>
+                            <i class="fa-brands fa-instagram hover:text-white"></i>
+                            <i class="fa-brands fa-linkedin hover:text-white"></i>
+                            <i class="fa-brands fa-behance hover:text-white"></i>
+                            <i class="fa-brands fa-whatsapp hover:text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          
+          
+
+        <button id="btn1" class="w-[50px] h-[50px] text-white font-semibold text-lg  rounded-full border-none bg-blue-600 fixed bottom-10 right-10 z-10 hidden">^</button>
+        <script src="./main.js"></script>
+    </body>
+</html>
+
+
+    
+   
